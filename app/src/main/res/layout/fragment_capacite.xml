@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textViewCapacite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacité"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.protypangel.narutoapi.view.design2D.CapaciteLine
+        android:id="@+id/lineCapacite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCapacite" />
+
+    <TextView
+        android:id="@+id/textViewNin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Ninjutsu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCapacite"
+        app:layout_constraintTop_toTopOf="@+id/textViewCapacite" />
+
+    <TextView
+        android:id="@+id/textViewTai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:text="Taijutsu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewIn" />
+
+    <TextView
+        android:id="@+id/textViewGen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:text="Genjutsu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewSoku" />
+
+    <TextView
+        android:id="@+id/textViewKen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:text="intelligence"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewSei" />
+
+    <TextView
+        android:id="@+id/textViewRiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Force"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewKen" />
+
+    <TextView
+        android:id="@+id/textViewSoku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="325dp"
+        android:text="Vitesse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIn" />
+
+    <TextView
+        android:id="@+id/textViewSei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="260dp"
+        android:text="Energie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSoku" />
+
+    <TextView
+        android:id="@+id/textViewIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="250dp"
+        android:text="Signes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNin" />
+
+    <TextView
+        android:id="@+id/textViewLvl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSoku" />
+
+    <TextView
+        android:id="@+id/textViewLvl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:text="2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLvl1"
+        app:layout_constraintStart_toStartOf="@+id/textViewLvl1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLvl1" />
+
+    <TextView
+        android:id="@+id/textViewLvl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLvl2"
+        app:layout_constraintStart_toStartOf="@+id/textViewLvl2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLvl2" />
+
+    <TextView
+        android:id="@+id/textViewLvl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLvl3"
+        app:layout_constraintStart_toStartOf="@+id/textViewLvl3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLvl3" />
+
+    <TextView
+        android:id="@+id/textViewLvl5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLvl4"
+        app:layout_constraintStart_toStartOf="@+id/textViewLvl4"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLvl4" />
+</androidx.constraintlayout.widget.ConstraintLayout>
