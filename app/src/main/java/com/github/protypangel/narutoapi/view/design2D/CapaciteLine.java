@@ -13,6 +13,8 @@ import java.util.HashMap;
 
 public class CapaciteLine extends View {
     private HashMap<String, Double> puissance;
+    private Canvas canvas = null;
+
     public CapaciteLine(Context context) {
         super(context);
     }
@@ -23,18 +25,21 @@ public class CapaciteLine extends View {
         super(context, attrs, defStyleAttr);
     }
     protected void onDraw(Canvas canvas) {
-        int h = super.getHeight();
-        int w = super.getWidth();
-        DatagrammeCapacite data = new DatagrammeCapacite(canvas, Math.min(h, w)) {
-            public double getPuissanceDouble(String var) {
-                return puissance.get(var);
-            }
-            public int getPuissanceSize() {
-                return puissance.size();
-            }
-        };
-        super.onDraw(data.getCanvas());
-        this.puissance = null;
+        if(this.canvas == null){
+            int h = super.getHeight();
+            int w = super.getWidth();
+            DatagrammeCapacite data = new DatagrammeCapacite(canvas, Math.min(h, w)) {
+                public double getPuissanceDouble(String var) {
+                    return puissance.get(var);
+                }
+                public int getPuissanceSize() {
+                    return puissance.size();
+                }
+            };
+            this.puissance = null;
+            this.canvas = data.getCanvas();
+        }
+        super.onDraw(this.canvas);
     }
     public void setPuissance(HashMap<String, Double> puissance){
         this.puissance = puissance;

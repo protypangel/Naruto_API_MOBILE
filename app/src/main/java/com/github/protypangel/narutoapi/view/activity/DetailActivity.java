@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.protypangel.narutoapi.R;
+import com.github.protypangel.narutoapi.model.api.Link;
 import com.github.protypangel.narutoapi.model.personnage.Personnage;
 import com.github.protypangel.narutoapi.view.fragment.FragmentCapacite;
 import com.google.gson.Gson;
@@ -27,7 +28,7 @@ public class DetailActivity extends AppCompatActivity {
         Personnage personnage = getIntent().getParcelableExtra("Character");
         this.imageView = findViewById(R.id.detail_logo);
         this.textView = findViewById(R.id.detail_name);
-        Picasso.with(imageView.getContext()).load("http://ns202518.ovh.net/mehdi/api/naruto/image/"+personnage.get().id+".jpg").resize(128,128).into(imageView);
+        Picasso.with(imageView.getContext()).load(Link.image+personnage.get().image).resize(128,128).into(imageView);
         this.textView.setText(personnage.get().firstName + " " + personnage.get().lastName);
     }
     private void initializeFragment() {
