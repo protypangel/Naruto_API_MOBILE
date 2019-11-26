@@ -26,10 +26,4 @@ public class FragmentCapacite extends Fragment {
         this.datagramme.draw();
         return view;
     }
-    public boolean isVisibility() {
-        return this.datagramme.getVisibility()==View.VISIBLE;
-    }
-    public void setVisibility(boolean visibility) {
-        this.datagramme.setVisibility(visibility?View.VISIBLE:View.GONE);
-    }
 }

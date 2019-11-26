@@ -1,4 +1,4 @@
-package com.github.protypangel.narutoapi.view.recyclerView.characterList;
+package com.github.protypangel.narutoapi.controler.recyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;

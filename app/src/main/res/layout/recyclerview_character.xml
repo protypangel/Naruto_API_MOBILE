@@ -13,8 +13,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar"/>
 
     <TextView
         android:id="@+id/titleApplication"

@@ -5,8 +5,6 @@ import android.content.Context;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.github.protypangel.narutoapi.view.recyclerView.characterList.RecyclerViewAdapter;
-
 public abstract class RecyclerViewCharacter {
     private RecyclerViewAdapter adapter;
     private RecyclerView recyclerView;

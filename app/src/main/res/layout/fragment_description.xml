@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.FragmentDescription">
+
+    <TextView
+        android:id="@+id/fragment_description_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthday:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_village"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_description_village"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Village:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_grade"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_birthday"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_birthday" />
+
+    <TextView
+        android:id="@+id/fragment_description_grade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Grade:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_village"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_village" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mission:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_mission_S"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_grade"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_grade" />
+
+    <TextView
+        android:id="@+id/fragment_description_mission_S"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="S:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_mission_A"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/fragment_description_mission_A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_mission_B"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_mission_S"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_mission_S" />
+
+    <TextView
+        android:id="@+id/fragment_description_mission_B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="B:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_mission_C"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_mission_A"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_mission_A" />
+
+    <TextView
+        android:id="@+id/fragment_description_mission_C"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="C:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_description_mission_D"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_mission_B"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_mission_B" />
+
+    <TextView
+        android:id="@+id/fragment_description_mission_D"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="D:"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_description_mission_C"
+        app:layout_constraintStart_toStartOf="@+id/fragment_description_mission_C" />
+</androidx.constraintlayout.widget.ConstraintLayout>

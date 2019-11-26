@@ -34,7 +34,6 @@ public class MainController {
         };
     }
     public void saveListOfPersonnage(List<Personnage> personnages){
-        Log.i("TESTE API", "here");
         this.personnages = personnages;
     }
     public Personnage getPersonnage(int position){
