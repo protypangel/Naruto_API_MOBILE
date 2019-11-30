@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="15dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/logoApplication"
@@ -21,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:text="Naruto Api"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/logoApplication"
         app:layout_constraintStart_toEndOf="@+id/logoApplication"
         app:layout_constraintTop_toTopOf="@+id/logoApplication" />
