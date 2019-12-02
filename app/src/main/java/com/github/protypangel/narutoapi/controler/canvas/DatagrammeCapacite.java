@@ -23,7 +23,6 @@ public abstract class DatagrammeCapacite {
         Paint paint = new Paint();
         paint.setColor(Color.rgb(173,186,138));
         paint.setStyle(Paint.Style.FILL);
-
         for(int i=0;i<this.getPuissanceSize();i++){
             double angle = (double)i * Math.PI * (2.0 / (double)this.getPuissanceSize());
             double r = rayon / Personnage.maxPuissance;

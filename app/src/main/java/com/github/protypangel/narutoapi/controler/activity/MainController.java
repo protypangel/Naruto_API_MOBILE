@@ -1,5 +1,6 @@
 package com.github.protypangel.narutoapi.controler.activity;
 
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +11,8 @@ import com.github.protypangel.narutoapi.model.api.Link;
 import com.github.protypangel.narutoapi.model.api.GetAPI;
 import com.github.protypangel.narutoapi.model.personnage.Personnage;
 import com.github.protypangel.narutoapi.view.activity.MainActivity;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
@@ -21,8 +24,26 @@ public class MainController {
 
     public MainController(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
-        this.getApi();
+        this.getFromCache();
+        if(personnages == null) {
+            this.getApi();
+        } else {
+            setRecyclerViewCharacter(this.personnages);
+        }
     }
+
+    private void setFromCache() {
+        SharedPreferences sharedPreferences = mainActivity.getSharedPreferences("shared preferences", mainActivity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("personnages", new Gson().toJson(personnages));
+        editor.apply();
+    }
+
+    private void getFromCache() {
+        SharedPreferences sharedPreferences = mainActivity.getSharedPreferences("shared preferences", mainActivity.MODE_PRIVATE);
+        this.personnages = new Gson().fromJson(sharedPreferences.getString("personnages",null),new TypeToken<List<Personnage>>() {}.getType());
+    }
+
     private void getApi(){
         new GetAPI() {
             public void successful(List<Personnage> personnages) {
@@ -35,6 +56,7 @@ public class MainController {
     }
     public void saveListOfPersonnage(List<Personnage> personnages){
         this.personnages = personnages;
+        this.setFromCache();
     }
     public Personnage getPersonnage(int position){
         return this.personnages.get(position);
