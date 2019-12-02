@@ -24,6 +24,8 @@ Le projet contient en plus :
 * L'utilisation d'une bottom-bar
 * L'utilisation de sa propre api (Serveur + base de donnée + Herbergeur)
 * Une custom View
+* Sauvegarde des données si on coupe internet
+
 ## Utilisation de l'api
 ```Naruto Api Mobile``` est une application mobile qui utilise sa propre api : http://ns202518.ovh.net/mehdi/api/naruto/. Cette api est concu avec les données des databooks créer par l'auteur :http://naruto.japflap.com/world-personnages-biographie-Naruto. L'api appelle un site web qui retourne la base de donnée du serveur 
 
