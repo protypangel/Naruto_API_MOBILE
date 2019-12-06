@@ -16,6 +16,7 @@ import com.github.protypangel.narutoapi.R;
 public abstract class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
     private OnItemClickListener listener;
     private int count;
+    private int size;
     protected RecyclerViewAdapter(int count){
         this.count = count;
     }
@@ -28,10 +29,17 @@ public abstract class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     @NonNull
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_character,parent,false);
+
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        layoutParams.width = parent.getWidth() / 3;
+        layoutParams.height = parent.getWidth() / 3;
+        this.size = parent.getWidth() / 3;
+        view.setLayoutParams(layoutParams);
+
         return new MyViewHolder(view);
     }
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.display(url(position));
+        holder.display(url(position),size);
     }
     public int getItemCount() {
         return this.count;
@@ -49,10 +57,8 @@ public abstract class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                 }
             });
         }
-        private void display(String url){
-            Picasso.with(this.imageView.getContext()).load(url).resize(128,128).into(this.imageView);
+        private void display(String url,int size){
+            Picasso.with(this.imageView.getContext()).load(url).resize(size,size).into(this.imageView);
         }
     }
 }
-/*
-*/
