@@ -2,7 +2,7 @@ package com.github.protypangel.narutoapi.controler.recyclerView;
 
 import android.content.Context;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class RecyclerViewCharacter {
@@ -10,11 +10,8 @@ public abstract class RecyclerViewCharacter {
     private RecyclerView recyclerView;
     public RecyclerViewCharacter(int count, Context context, RecyclerView recyclerView){
         this.recyclerView = recyclerView;
-        this.recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        this.recyclerView.setLayoutManager(new GridLayoutManager(context,3));
         this.adapter = new RecyclerViewAdapter(count) {
-            public String name(int position) {
-                return getName(position);
-            }
             public String url(int position) {
                 return getUrl(position);
             }
@@ -27,6 +24,5 @@ public abstract class RecyclerViewCharacter {
         this.recyclerView.setAdapter(this.adapter);
     }
     public abstract void clickListener(int position);
-    public abstract String getName(int position);
     public abstract String getUrl(int position);
 }
