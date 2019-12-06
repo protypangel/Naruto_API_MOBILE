@@ -7,22 +7,10 @@
 
     <ImageView
         android:id="@+id/logoApplication"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"/>
-
-    <TextView
-        android:id="@+id/titleApplication"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:text="Naruto Api"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/logoApplication"
-        app:layout_constraintStart_toEndOf="@+id/logoApplication"
-        app:layout_constraintTop_toTopOf="@+id/logoApplication" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

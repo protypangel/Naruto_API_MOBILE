@@ -31,20 +31,17 @@ public abstract class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         return new MyViewHolder(view);
     }
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.display(name(position),url(position));
+        holder.display(url(position));
     }
     public int getItemCount() {
         return this.count;
     }
-    public abstract String name(int position);
     public abstract String url(int position);
     class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
         private ImageView imageView;
         private MyViewHolder(View itemView) {
             super(itemView);
             this.imageView = itemView.findViewById(R.id.logoApplication);
-            this.textView = itemView.findViewById(R.id.titleApplication);
             itemView.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v){
                     int position = getAdapterPosition();
@@ -52,9 +49,8 @@ public abstract class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                 }
             });
         }
-        private void display(String username,String url){
-            this.textView.setText(username);
-            Picasso.with(this.imageView.getContext()).load(url).resize(64,64).into(this.imageView);
+        private void display(String url){
+            Picasso.with(this.imageView.getContext()).load(url).resize(128,128).into(this.imageView);
         }
     }
 }

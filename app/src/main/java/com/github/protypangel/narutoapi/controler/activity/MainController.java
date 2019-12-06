@@ -1,7 +1,6 @@
 package com.github.protypangel.narutoapi.controler.activity;
 
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -66,10 +65,6 @@ public class MainController {
         this.recyclerViewCharacter = new RecyclerViewCharacter(personnages.size(),mainActivity.getApplicationContext(),recyclerView) {
             public void clickListener(int position) {
                 mainActivity.otherActivity(personnages.get(position));
-            }
-            public String getName(int position) {
-                // Return the full name of the personnage
-                return personnages.get(position).get().firstName + " " + personnages.get(position).get().lastName;
             }
             public String getUrl(int position) {
                 // Return the the url of the image
